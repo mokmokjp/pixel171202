@@ -1,0 +1,433 @@
+/********************
+Foundation > html5doctorReset
+    v1.6.1
+    Last Updated: 2010-09-17
+    Author: Richard Clark - http://richclarkdesign.com
+    Twitter: @rich_clark
+    http://html5doctor.com/html-5-reset-stylesheet/
+********************/
+/* stylelint-disable */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* stylelint-enable */
+/********************
+Foundation > 要素のデフォルトスタイルを定義
+********************/
+@font-face {
+  font-family: "PixelMplus10";
+  src: url("../font/PixelMplus10-Regular.eot") format("eot"), url("../font/PixelMplus10-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "PixelMplus10";
+  src: url("../font/PixelMplus10-Bold.eot") format("eot"), url("../font/PixelMplus10-Bold.woff") format("woff");
+  font-weight: bold;
+}
+@font-face {
+  font-weight: normal;
+}
+* {
+  box-sizing: border-box;
+  /* 要素の幅にpadding,borderを含めなくなる */
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  background: #fafafa;
+  color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.25s;
+}
+a:link, a:visited {
+  color: #ffffff;
+}
+a:hover, a:active {
+  color: #ebebeb;
+}
+
+/********************
+pixel171202
+ドット絵アドベントカレンダー用ページ
+********************/
+.pixel171202 {
+  font-family: "PixelMplus10";
+  font-weight: normal;
+  font-size: 16px;
+  color: #000000;
+}
+.pixel171202 a {
+  text-decoration: underline;
+  transition: all 0.25s;
+}
+.pixel171202 a:link, .pixel171202 a:visited {
+  color: #551a8b;
+}
+.pixel171202 a:hover, .pixel171202 a:active {
+  color: #401469;
+}
+
+.pixel171202__profile {
+  margin: 1.4rem 0 0 0;
+  display: table;
+}
+
+.pixel171202__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.pixel171202__profile__name {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 0 0 0.8rem;
+}
+
+.pixel171202__header {
+  width: 100%;
+  height: 10.4rem;
+  background: url("../img/header_bg_pattern_sp.png") repeat-x;
+  position: relative;
+}
+
+.pixel171202__header__bg--left {
+  width: 4.2rem;
+  height: 10.4rem;
+  float: left;
+  background: url("../img/header_bg_left_sp.png") no-repeat;
+}
+
+.pixel171202__header__bg--right {
+  width: 20.1rem;
+  height: 10.4rem;
+  float: right;
+  background: url("../img/header_bg_right_sp.png") no-repeat;
+}
+
+.pixel171202__header__bg--tile {
+  width: 100%;
+  height: 10.4rem;
+  background: url("../img/bg_tile.png") repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.pixel171202__bg {
+  background: url("../img/bg_v2.png") repeat-y;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  zoom: 1;
+}
+
+.pixel171202__h1 {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 20;
+}
+
+.pixel171202__article {
+  margin: 1rem 3rem;
+}
+.pixel171202__article p {
+  padding: 1.4rem 0 0 0;
+}
+.pixel171202__article dl {
+  padding: 1rem 2rem 0 2.5rem;
+}
+.pixel171202__article dt {
+  margin: 0.5rem 0 0.5rem 0;
+}
+.pixel171202__article dd {
+  padding: 0.5rem 0 0.5rem 2.5rem;
+}
+.pixel171202__article ul {
+  margin: 1.4rem 0 0 1.7rem;
+  list-style: square;
+}
+.pixel171202__article li {
+  margin: 0 0 0.5rem 0;
+}
+
+.pixel171202__window {
+  border-top: 0.3rem solid #E3E3E3;
+  border-left: 0.3rem solid #E3E3E3;
+  border-right: 0.3rem solid #8E8E8E;
+  border-bottom: 0.3rem solid #8E8E8E;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  opacity: 0.94;
+}
+
+.pixel171202__window__wire {
+  border: 0.5rem solid #BBBBBB;
+}
+
+.pixel171202__window__head {
+  height: 3rem;
+  background: #2D4E9F;
+  position: relative;
+}
+
+.pixel171202__window__button_area {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+
+.pixel171202__window__button {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0 0 0.4rem;
+  float: left;
+}
+
+.pixel171202__window__button--white {
+  background: #F9F9FF;
+}
+
+.pixel171202__window__button--cyan {
+  background: #51C7E9;
+}
+
+.pixel171202__window__button--blue {
+  background: #5D33C4;
+}
+
+.pixel171202__window__button--magenta {
+  background: #CA3083;
+}
+
+.pixel171202__window__button--yellow {
+  background: #D9D823;
+}
+
+.pixel171202__window__button--orange {
+  background: #DB8930;
+}
+
+.pixel171202__window__button--purple {
+  background: #AB33CA;
+}
+
+.pixel171202__window__bg {
+  margin: 0 auto;
+  background: #EEEEEE;
+}
+
+.pixel171202__window__content {
+  margin: 0 auto;
+  padding: 0.1rem 3rem 4rem 3rem;
+  border-top: 0.2rem solid #8E8E8E;
+  border-left: 0.2rem solid #8E8E8E;
+  border-right: 0.2rem solid #E3E3E3;
+  border-bottom: 0.2rem solid #E3E3E3;
+}
+
+.pixel171202__h2 {
+  margin: 3.6rem 0 1rem 0;
+  font-size: 21px;
+}
+
+.pixel171202__h3 {
+  padding: 1.4rem 0 0 0;
+}
+
+.pixel171202__reference {
+  margin: 1.4rem 0 0.5rem 0;
+  padding: 2.5rem;
+  background: #CCCCCC;
+}
+.pixel171202__reference p:first-child {
+  padding: 0;
+}
+
+.pixel171202__footer {
+  width: 100%;
+  height: 8rem;
+  margin: 6rem 0 0 0;
+  background: #141414;
+  position: relative;
+}
+
+.pixel171202__footer__icon--left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20%;
+}
+
+.pixel171202__footer__icon--center {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.pixel171202__footer__icon--right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20%;
+}
+
+@media screen and (min-width: 960px) {
+  .pixel171202__header {
+    height: 20.8rem;
+    background: url("../img/header_bg_pattern_pc.png") repeat-x;
+  }
+
+  .pixel171202__header__bg--left {
+    height: 20.8rem;
+    width: 8.4rem;
+    background: url("../img/header_bg_left_pc.png") repeat-x;
+  }
+
+  .pixel171202__header__bg--right {
+    height: 20.8rem;
+    width: 40.2rem;
+    background: url("../img/header_bg_right_pc.png") repeat-x;
+  }
+
+  .pixel171202__header__bg--tile {
+    height: 20.8rem;
+  }
+
+  .pixel171202__h1 {
+    font-size: 45px;
+  }
+
+  .pixel171202__article {
+    margin: 3rem 3rem;
+  }
+}
